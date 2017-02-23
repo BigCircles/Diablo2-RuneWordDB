@@ -3,6 +3,7 @@ package mainFrame;
 import javafx.application.Application;
 import javafx.scene.Scene;
 
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 
@@ -16,14 +17,16 @@ public class Main extends Application {
 
 
         primaryStage.setTitle("POD D2DB");
-        primaryStage.setScene(rootScene);
         rootScene.getStylesheets().add(Main.class.getResource("stylesheet.css").toExternalForm());
+        primaryStage.setScene(rootScene);
+
         primaryStage.setResizable(false);
         primaryStage.show();
     }
 
    public void init()
    {
+
     rootFrame = new MainFrame();
     rootScene = new Scene(rootFrame);
 

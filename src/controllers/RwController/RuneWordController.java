@@ -6,6 +6,8 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -116,10 +118,26 @@ public class RuneWordController {
 
         void addAttributeLabel(String labelText)
         {
-            attributeLabels.add(new Label(labelText));
+            Label newLabel = new Label(labelText);
+            attributeLabels.add(newLabel);
             attributeLabels.get(attributeLabels.size()-1).setAlignment(Pos.CENTER);
             attributeLabels.get(attributeLabels.size()-1).setMaxWidth(Double.MAX_VALUE);
-            attributeLabels.get(attributeLabels.size()-1).setPadding(new Insets(5,10,5,10));
+
+            if (attributeLabels.size()> 12 && attributeLabels.size()< 14) {
+                for (Label element : attributeLabels) {
+                    element.setPadding(new Insets(3, 10, 3, 10));
+                }
+            }
+            else if (attributeLabels.size()> 14)
+            {
+                for (Label element : attributeLabels) {
+                    element.setPadding(new Insets(1, 10, 1, 10));
+                    element.setStyle("-fx-font-size: 6pt; -fx-text-fill:#4850b8");
+                }
+            }
+            else
+                attributeLabels.get(attributeLabels.size()-1).setPadding(new Insets(5,10,5,10));
+
             attributeLabels.get(attributeLabels.size()-1).setStyle("-fx-text-fill:#4850b8");
 
             getChildren().add(attributeLabels.get(attributeLabels.size()-1));
