@@ -1,0 +1,36 @@
+
+#RunePane {
+    -fx-background-color:#006080;
+}
+#OSPane{
+    -fx-background-color:#0086b3;
+}
+#SBSPane {
+    -fx-background-color:#006080;
+}
+
+.radio-button {
+    -fx-text-fill: white;
+}
+
+.label {
+    -fx-text-fill:white;
+    -fx-alignment:center;
+  -fx-font-family:Diablo Heavy;
+}
+
+.menu .label {
+ -fx-text-fill: black;
+}
+
+.scroll-bar:vertical {
+    -fx-unit-increment: 10 ;
+    -fx-block-increment: 100 ;
+}
+
+.vbox
+{
+    -fx-background-color:black;
+}
+
+
