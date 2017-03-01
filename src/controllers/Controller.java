@@ -9,6 +9,9 @@ public class Controller {
     public final static String[] WeaponTypeList = {"Axe","Bow","Crossbow","Dagger","Javelin","Mace","Polearm","Scepter","Spear","Stave","Sword","Throwing Weapon","Wands"};
     public final static String[] ArmorTypeList = {"Armor", "Helmet", "Shield"};
 
+    ////////////////////////////////////////////////////////////////////////////////////
+    /**Controls which sub-panels are enabled based on which button was clicked first after reset, a
+     * lso sends the search parameters (buttons clicked) to the right panel to display which Runewords match which params */
      class LeftSidePaneController
     {
         public LeftSidePaneController()
@@ -16,5 +19,16 @@ public class Controller {
 
         }
     }
+    /////////////////////////////////////////////////////////////////////////////////////
+    /**
+     * Searches through the runeword list to find whatever search params the leftside panels are currently searching by.
+     * */
+    class RightSidePaneController
+    {
+        public RightSidePaneController()
+        {
 
+        }
+    }
+    //////////////////////////////////////////////////////////////////////////////////////
 }

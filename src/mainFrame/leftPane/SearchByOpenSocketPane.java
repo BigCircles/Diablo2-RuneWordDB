@@ -1,5 +1,7 @@
 package mainFrame.leftPane;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -49,6 +51,14 @@ public class SearchByOpenSocketPane extends VBox{
         {
             osButtons[x] = new ToggleButton(Integer.toString(buttonLabelCounter++));
             osButtons[x].setMaxSize(Double.MAX_VALUE,Double.MAX_VALUE);
+            osButtons[x].setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    System.out.println(event.getSource().toString());
+                }
+            });
+
+
             gridPane.add(osButtons[x],x,0);
         }
 

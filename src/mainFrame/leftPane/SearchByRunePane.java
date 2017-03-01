@@ -1,10 +1,13 @@
 package mainFrame.leftPane;
 
 import controllers.Controller;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.*;
 
@@ -61,6 +64,13 @@ public class SearchByRunePane extends VBox {
         for (int x=0;x< button.length;x++)
         {
              button[x] = new ToggleButton();
+             button[x].setOnAction(new EventHandler<ActionEvent>() {
+                 @Override
+                 public void handle(ActionEvent event) {
+                     ToggleButton clicked = (ToggleButton)event.getSource();
+                     System.out.println(clicked.getText());
+                 }
+             });
              button[x].setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
              button[x].setText(Controller.RuneWordList[x]);
         }
